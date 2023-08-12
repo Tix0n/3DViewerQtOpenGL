@@ -56,11 +56,8 @@ gcov_report: tests
 	rm -f tests_s21_string.gcda tests_s21_string.gcno
 
 linter:
-	cp ../materials/linters/.clang-format ./
-	clang-format -i ./3dviewer/*.c ./3dviewer/*.h ./3dviewer/*.cpp
-	clang-format -n ./3dviewer/*.c ./3dviewer/*.h ./3dviewer/*.cpp
-	rm .clang-format
-
+	clang-format -i --style=Google ./3dviewer/*.c ./3dviewer/*.h ./3dviewer/*.cpp
+	clang-format -n --style=Google ./3dviewer/*.c ./3dviewer/*.h ./3dviewer/*.cpp
 
 clean:
 	rm -rf build* $(INSTALL_DIR) latex html
