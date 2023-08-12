@@ -23,7 +23,7 @@ build:
 
 rebuild: clean all
 
-install:
+install: build
 	mkdir $(INSTALL_DIR)
 	install $(BUILD_DIR)$(APP_DIR)/3dviewer $(INSTALL_DIR)/3dviewer
 
