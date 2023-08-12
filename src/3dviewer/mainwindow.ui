@@ -1,0 +1,768 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>550</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="glView" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>640</width>
+      <height>480</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_move_x">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>10</y>
+      <width>130</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>X move</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_move_y">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>58</y>
+      <width>130</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Y move</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_move_z">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>106</y>
+      <width>130</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Z move</string>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="move_x_spinbox">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>34</y>
+      <width>130</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <double>-150.000000000000000</double>
+    </property>
+    <property name="maximum">
+     <double>150.000000000000000</double>
+    </property>
+    <property name="singleStep">
+     <double>1.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="move_y_spinbox">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>82</y>
+      <width>130</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <double>-150.000000000000000</double>
+    </property>
+    <property name="maximum">
+     <double>150.000000000000000</double>
+    </property>
+    <property name="singleStep">
+     <double>1.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="move_z_spinbox">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>130</y>
+      <width>130</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <double>-150.000000000000000</double>
+    </property>
+    <property name="maximum">
+     <double>150.000000000000000</double>
+    </property>
+    <property name="singleStep">
+     <double>1.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_rotate_x">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>154</y>
+      <width>130</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>X rotate</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_rotate_y">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>202</y>
+      <width>130</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Y rotate</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_rotate_z">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>250</y>
+      <width>130</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Z rotate</string>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="rotate_x_spinbox">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>178</y>
+      <width>130</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <double>-180.000000000000000</double>
+    </property>
+    <property name="maximum">
+     <double>180.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="rotate_y_spinbox">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>226</y>
+      <width>130</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <double>-180.000000000000000</double>
+    </property>
+    <property name="maximum">
+     <double>180.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="rotate_z_spinbox">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>274</y>
+      <width>130</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <double>-180.000000000000000</double>
+    </property>
+    <property name="maximum">
+     <double>180.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QLabel" name="name_file">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>490</y>
+      <width>200</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="scaling_butt">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>322</y>
+      <width>130</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <double>0.010000000000000</double>
+    </property>
+    <property name="maximum">
+     <double>10.000000000000000</double>
+    </property>
+    <property name="singleStep">
+     <double>0.100000000000000</double>
+    </property>
+    <property name="stepType">
+     <enum>QAbstractSpinBox::DefaultStepType</enum>
+    </property>
+    <property name="value">
+     <double>1.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_scaling_butt">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>298</y>
+      <width>130</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Scaling</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="start_screencast">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>466</y>
+      <width>130</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Start screencast</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="name_file_2">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>442</y>
+      <width>130</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Animation: </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_custom_vertex_size">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>346</y>
+      <width>130</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Vertex size</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="custom_vertex_size">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>370</y>
+      <width>130</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>0</number>
+    </property>
+    <property name="maximum">
+     <number>30</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="custom_line_size">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>418</y>
+      <width>130</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="maximum">
+     <number>10</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_custom_vertex_size_2">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>394</y>
+      <width>130</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Line size</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_vertex_count">
+    <property name="geometry">
+     <rect>
+      <x>285</x>
+      <y>490</y>
+      <width>95</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Vertex count:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_line_count">
+    <property name="geometry">
+     <rect>
+      <x>479</x>
+      <y>490</y>
+      <width>78</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Line count:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="vertex_count">
+    <property name="geometry">
+     <rect>
+      <x>385</x>
+      <y>490</y>
+      <width>89</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="line_count">
+    <property name="geometry">
+     <rect>
+      <x>562</x>
+      <y>490</y>
+      <width>88</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_filename">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>490</y>
+      <width>65</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Filename:</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu123">
+    <property name="title">
+     <string>Menu</string>
+    </property>
+    <widget class="QMenu" name="menu">
+     <property name="title">
+      <string>Model settings</string>
+     </property>
+     <widget class="QMenu" name="menu_2">
+      <property name="title">
+       <string>Line type</string>
+      </property>
+      <addaction name="solid_line"/>
+      <addaction name="dotted_line"/>
+     </widget>
+     <widget class="QMenu" name="menu_3">
+      <property name="title">
+       <string>Projection type</string>
+      </property>
+      <addaction name="parallel_projection"/>
+      <addaction name="central_projection"/>
+     </widget>
+     <widget class="QMenu" name="menu_4">
+      <property name="title">
+       <string>Background color</string>
+      </property>
+      <addaction name="background_black"/>
+      <addaction name="background_white"/>
+      <addaction name="background_red"/>
+      <addaction name="background_blue"/>
+      <addaction name="background_green"/>
+     </widget>
+     <widget class="QMenu" name="menu_5">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="title">
+       <string>Line color</string>
+      </property>
+      <addaction name="line_black"/>
+      <addaction name="line_white"/>
+      <addaction name="line_red"/>
+      <addaction name="line_blue"/>
+      <addaction name="line_green"/>
+     </widget>
+     <widget class="QMenu" name="vertex">
+      <property name="title">
+       <string>Vertices type</string>
+      </property>
+      <addaction name="no_vertex"/>
+      <addaction name="vertex_circle"/>
+      <addaction name="vertex_square"/>
+     </widget>
+     <widget class="QMenu" name="vertex_color">
+      <property name="title">
+       <string>Vertices color</string>
+      </property>
+      <addaction name="vertex_black"/>
+      <addaction name="vertex_white"/>
+      <addaction name="vertex_red"/>
+      <addaction name="vertex_blue"/>
+      <addaction name="vertex_green"/>
+     </widget>
+     <addaction name="menu_3"/>
+     <addaction name="menu_2"/>
+     <addaction name="menu_4"/>
+     <addaction name="menu_5"/>
+     <addaction name="vertex"/>
+     <addaction name="vertex_color"/>
+    </widget>
+    <widget class="QMenu" name="menu_save">
+     <property name="title">
+      <string>Save as</string>
+     </property>
+     <addaction name="action_bmp"/>
+     <addaction name="action_jpeg"/>
+    </widget>
+    <addaction name="actionopen"/>
+    <addaction name="menu"/>
+    <addaction name="menu_save"/>
+   </widget>
+   <addaction name="menu123"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionopen">
+   <property name="text">
+    <string>Open new .obj file</string>
+   </property>
+   <property name="toolTip">
+    <string>Открыть.obj файл</string>
+   </property>
+  </action>
+  <action name="solid_line">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Solid line</string>
+   </property>
+  </action>
+  <action name="dotted_line">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Dotted line</string>
+   </property>
+  </action>
+  <action name="parallel_projection">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Parallel projection</string>
+   </property>
+  </action>
+  <action name="central_projection">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Central projection</string>
+   </property>
+  </action>
+  <action name="background_black">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Black</string>
+   </property>
+  </action>
+  <action name="background_white">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>White</string>
+   </property>
+  </action>
+  <action name="background_red">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Red</string>
+   </property>
+  </action>
+  <action name="background_blue">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Blue</string>
+   </property>
+  </action>
+  <action name="background_green">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Green</string>
+   </property>
+  </action>
+  <action name="line_black">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Black</string>
+   </property>
+  </action>
+  <action name="line_white">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>White</string>
+   </property>
+  </action>
+  <action name="line_red">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Red</string>
+   </property>
+  </action>
+  <action name="line_blue">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Blue</string>
+   </property>
+  </action>
+  <action name="line_green">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Green</string>
+   </property>
+  </action>
+  <action name="action_bmp">
+   <property name="text">
+    <string>.bmp</string>
+   </property>
+  </action>
+  <action name="action_jpeg">
+   <property name="text">
+    <string>.jpeg</string>
+   </property>
+  </action>
+  <action name="no_vertex">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>No vertices</string>
+   </property>
+  </action>
+  <action name="vertex_circle">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Circle vertices</string>
+   </property>
+  </action>
+  <action name="vertex_square">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Square vertices</string>
+   </property>
+  </action>
+  <action name="vertex_small">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Маленький</string>
+   </property>
+  </action>
+  <action name="vertex_standart">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Средний</string>
+   </property>
+  </action>
+  <action name="vertex_big">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Большой</string>
+   </property>
+  </action>
+  <action name="vertex_black">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Black</string>
+   </property>
+  </action>
+  <action name="vertex_white">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>White</string>
+   </property>
+  </action>
+  <action name="vertex_red">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Red</string>
+   </property>
+  </action>
+  <action name="vertex_blue">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Blue</string>
+   </property>
+  </action>
+  <action name="vertex_green">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Green</string>
+   </property>
+  </action>
+  <action name="vertex_custom">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Пользовательский</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>glView</class>
+   <extends>QWidget</extends>
+   <header location="global">glview.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
