@@ -9,7 +9,7 @@ ifeq ($(OS), Linux)
 	BUILD_DIR = build-3dviewer-Desktop_Qt_5_15_2_GCC_64bit-Debug/
 	APP_DIR=
 	LIBS = -lcheck -lm -lpthread -lsubunit -lrt
-else
+else ifeq ($(OS), Darwin)
 	BUILD_DIR = build-3dviewer-Desktop_Qt_5_15_2_GCC_64bit-Debug/
 	APP_DIR=3dviewer.app/Contents/MacOS
 	LIBS = -lcheck
