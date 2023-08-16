@@ -53,7 +53,6 @@ tests: tests.a tests_/tests.c
 
 gcov_report: tests
 	gcovr -r . --html --html-details -o coverage_report.html
-	rm -f tests_s21_string.gcda tests_s21_string.gcno
 
 linter:
 	clang-format -i --style=Google ./3dviewer/*.c ./3dviewer/*.h ./3dviewer/*.cpp
